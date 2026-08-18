@@ -1,0 +1,16 @@
+[package]
+name = "nv_audio_fx_vst"
+version = "1.0.0"
+edition = "2021"
+authors = ["RinLogs"]
+description = "Real-time AI Noise Suppression and Room Echo Removal VST3 plugin powered by NVIDIA Maxine Audio Effects SDK"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git", default-features = false, features = ["vst3", "assert_process_allocs"] }
+nih_plug_egui = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+libloading = "0.8"
+log = "0.4"
